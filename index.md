@@ -8,6 +8,10 @@
 
 
 
+
+
+
+
 ![](figures-fig1-v5.png "Nested Set Transformers Overview")
 
 

@@ -39,7 +39,7 @@ Exponential tilting enables control over the generation of realistic vehicle-veh
 
 ![](alltilting.png)
 
-CtRL-Sim enables control over vehicle-vehicle and vehicle-edge behaviours as well as goal reaching behaviours.
+CtRL-Sim enables control over vehicle-vehicle and vehicle-edge behaviours as well as goal reaching behaviours. Moreover, positive tilting can reduce traffic violations in the generated behaviours.
 
 ## Bibtex
 

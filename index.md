@@ -11,6 +11,9 @@
 ![](figures-fig1-v5.png "Nested Set Transformers Overview")
 
 
+TL;DR: We propose **CtRL-Sim**, a framework that leverages return-conditioned offline reinforcement learning to enable reactive, closed-loop, and controllable behaviour simulation within a physics-enhanced Nocturne environment. CtRL-Sim utilizes exponential tilting of the predicted return distribution to control the agent behaviours, which enables the generation of a wide range of realistic driving behaviours beyond the scope of the initial dataset, including adversarial behaviours.
+
+
 ## Abstract
 
 Evaluating autonomous vehicle stacks (AVs) in simulation typically involves replaying driving logs from real-world recorded traffic. 

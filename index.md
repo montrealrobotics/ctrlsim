@@ -15,6 +15,109 @@ TL;DR: We propose **CtRL-Sim**, a framework that leverages return-conditioned of
 
 ![](overview.png)
 
+## Demo
+
+<div class="container ">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <div class="row">
+        <div>Metric:</div>
+        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+          
+          <input type="radio" class="btn-check" name="btnradio" id="veh" autocomplete="off" checked>
+          <label class="btn btn-outline-primary" for="veh">Vehicle-Vehicle</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="edge" autocomplete="off">
+          <label class="btn btn-outline-primary" for="edge">Vehicle-Edge</label>
+
+          <input type="radio" class="btn-check" name="btnradio" id="goal" autocomplete="off">
+          <label class="btn btn-outline-primary" for="goal">Vehicle-Goal</label>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <label for="tiltslider" class="form-label" id="tiltsliderLabel">Tilting: Neutral (default)</label>
+      </div>
+      <div class="row">
+        <input type="range" class="form-range" min="0" max="2" step="1" id="tiltslider">
+      </div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <div class="row">
+        <video id="myvideo" controls autoplay muted>
+          <source id="vmp4" src="/assets/vids/veh_veh_no_tilt/veh_veh_no_tilt.mp4" type="video/mp4">
+          <p>Your browser does not support this video format.</p>
+        </video>
+      </div>
+    </div>
+    <div class="col-1"></div>
+  </div>
+</div>
+
+<script>
+  let tsl = document.getElementById("tiltsliderLabel");
+  var vid = document.getElementById("myvideo");
+  let tilt = "no"
+  let scene = "veh_veh"
+  document.getElementById("tiltslider").addEventListener('input', evt => {
+    // console.log(evt.target.value)
+    if (evt.target.value == 0) {
+      tsl.innerHTML = "Tilting: Negative (ignoring instructions) 💥";
+      tilt = "negative";
+    } else if (evt.target.value == 1) {
+      tsl.innerHTML = "Tilting: Neutral (default)";
+      tilt = "no";
+    } else {
+      tsl.innerHTML = "Tilting: Positive (more eager)";
+      tilt = "positive";
+    }
+    swapVid();
+  });
+
+  function swapScenario(evt) {
+    // console.log(evt.target.id);
+    if (evt.target.id == "veh") {
+      scene = "veh_veh";
+    } else if (evt.target.id == "edge") {
+      scene = "veh_edge";
+    } else {
+      scene = "goal";
+    }
+    swapVid();
+  }
+
+  function swapVid() {
+    let vpath = `/assets/vids/${scene}_${tilt}_tilt/${scene}_${tilt}_tilt.mp4`;
+    vid.setAttribute('src', vpath);
+    vid.load();
+  }
+  document.querySelectorAll("input[name='btnradio']").forEach((input) => {
+      input.addEventListener('change', swapScenario);
+  });
+
+  // var count = 1;
+  // var vid = document.getElementById("myvideo");
+  // vid.addEventListener("ended", switchvideo, false);
+  // function switchvideo(e) {
+
+  //   if (count % 2 === 0) {
+  //     vid.setAttribute('src', 'v1.mp4');
+  //   } else {
+  //     vid.setAttribute('src', 'v2.mp4');
+  //   }
+  //   count++;
+  //   vid.load();
+  //   try {
+  //     setTimeout(()=>vid.play(), 2000);
+  //   } catch (err){
+  //      console.log(err)
+  //   }
+  // }
+</script>
 
 ## Abstract
 

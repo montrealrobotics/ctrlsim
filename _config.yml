@@ -4,3 +4,5 @@ theme: jekyll-theme-cayman
 links:
   arxiv: https://arxiv.org/abs/2403.19918
   code: https://github.com/montrealrobotics/ctrl-sim/
+# sass:
+#   sass_dir: _sass

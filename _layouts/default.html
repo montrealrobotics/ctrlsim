@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
 </head>
@@ -18,11 +21,11 @@
 <header class="page-header" role="banner">
     <h1 class="project-name">CtRL-Sim: Reactive and Controllable Driving Agents with Offline Reinforcement Learning</h1>
     <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-    <a href="{{ site.links.arxiv }}" class="btn">Paper on Arxiv</a>
-    <a href="{{ site.links.code }}" class="btn">Code</a>
+    <a href="{{ site.links.arxiv }}" class="btn-head">Paper on Arxiv</a>
+    <a href="{{ site.links.code }}" class="btn-head">Code</a>
     {% if site.show_downloads %}
-    <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
-    <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
+    <a href="{{ site.github.zip_url }}" class="btn-head">Download .zip</a>
+    <a href="{{ site.github.tar_url }}" class="btn-head">Download .tar.gz</a>
     {% endif %}
 </header>
 

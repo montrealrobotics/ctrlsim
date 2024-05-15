@@ -49,7 +49,7 @@ TL;DR: We propose **CtRL-Sim**, a framework that leverages return-conditioned of
     <div class="col-10">
       <div class="row">
         <video id="myvideo" controls autoplay muted>
-          <source id="vmp4" src="/assets/vids/veh_veh_no_tilt/veh_veh_no_tilt.mp4" type="video/mp4">
+          <source id="vmp4" src="assets/vids/veh_veh_no_tilt/veh_veh_no_tilt.mp4" type="video/mp4">
           <p>Your browser does not support this video format.</p>
         </video>
       </div>
@@ -91,7 +91,7 @@ TL;DR: We propose **CtRL-Sim**, a framework that leverages return-conditioned of
   }
 
   function swapVid() {
-    let vpath = `/assets/vids/${scene}_${tilt}_tilt/${scene}_${tilt}_tilt.mp4`;
+    let vpath = `assets/vids/${scene}_${tilt}_tilt/${scene}_${tilt}_tilt.mp4`;
     vid.setAttribute('src', vpath);
     vid.load();
   }

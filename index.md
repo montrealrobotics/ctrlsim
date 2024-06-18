@@ -135,13 +135,9 @@ At inference time, we leverage exponential tilting to control the agent behaviou
 
 CtRL-Sim can faithfully imitate the multi-agent driving behaviours found in the Waymo dataset. The teal agents are controlled by CtRL-Sim, and other agents in pink are set to log-replay. 
 
-![](positivenegativetilting.png)
+![](veh-veh-tilting-website.gif)
 
-Exponential tilting enables control over the generation of realistic vehicle-vehicle and vehicle-edge collision scenarios. We show the evolution of four traffic scenes with the top panels applying positive tilting to the CtRL-Sim-controlled agent (shown in teal) and the bottom panels applying negative tilting to the same CtRL-Sim- controlled agent. Bounding boxes outlined in red contain a traffic violation. All other agents are set to log-replay through physics, with the agent interacting with the CtRL-Sim-controlled agent denoted in pink. Goals are denoted by small circles. 
-
-![](alltilting.png)
-
-CtRL-Sim enables control over vehicle-vehicle and vehicle-edge behaviours as well as goal reaching behaviours. Moreover, positive tilting can reduce traffic violations in the generated behaviours.
+Exponential tilting enables control over the generation of realistic vehicle-vehicle collision scenarios. We show the evolution of three traffic scenes with the top panels applying no tilting to the CtRL-Sim-controlled agent (shown in teal) and the bottom panels applying negative tilting to the same CtRL-Sim- controlled agent. Bounding boxes outlined in red contain a traffic violation. All other agents are set to log-replay through physics, with the agent interacting with the CtRL-Sim-controlled agent denoted in pink. Goals are denoted by small circles. 
 
 ## Bibtex
 

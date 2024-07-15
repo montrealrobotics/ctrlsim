@@ -111,6 +111,9 @@
   // }
 </script>
 
+<br>
+<br>
+
 TL;DR: We propose **CtRL-Sim**, a framework that leverages return-conditioned offline reinforcement learning (RL) to enable reactive, closed-loop, and controllable behaviour simulation within a physics-enhanced Nocturne environment. We propose a return-conditioned multi-agent encoder-decoder Transformer architecture within the CtRL- Sim framework to imitate the driving behaviours in a curated offline RL Waymo dataset. We then leverage exponential tilting of the predicted return distribution as a simple yet effective mechanism to control the simulated agent behaviours. CtRL-Sim enables the generation of a wide range of realistic driving behaviours beyond the scope of the initial dataset, including adversarial behaviours for the generation of safety-critical scenarios.
 
 ![](figures-fig1-v5.png "Nested Set Transformers Overview")

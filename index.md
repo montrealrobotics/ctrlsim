@@ -134,7 +134,7 @@ At inference time, we leverage exponential tilting to control the agent behaviou
 
 ![](multi-agent-sim-website.gif)
 
-CtRL-Sim can faithfully imitate the multi-agent driving behaviours found in the Waymo dataset. The teal agents are controlled by CtRL-Sim, and other agents in pink are set to log-replay. 
+CtRL-Sim can faithfully imitate the multi-agent driving behaviours found in the Waymo dataset. The teal agents are controlled by CtRL-Sim, and other agents in beige are set to log-replay. 
 
 ![](veh-veh-tilting-website.gif)
 
@@ -144,9 +144,9 @@ Exponential tilting enables control over the generation of realistic vehicle-veh
 
     @inproceedings{
       rowe2024ctrlsim,
-      title={CtRL-Sim: Reactive and Controllable Driving Agents with Offline Reinforcement Learning},
-      author={Luke Rowe and Roger Girgis and Anthony Gosselin and Bruno Carrez and Florian Golemo  and Felix Heide and Liam Paull and Christopher Pal},
-      journal={arXiv},
-      volume={2403.19918},
-      year={2024}
+      title={Ct{RL}-Sim: Reactive and Controllable Driving Agents with Offline Reinforcement Learning},
+      author={Luke Rowe and Roger Girgis and Anthony Gosselin and Bruno Carrez and Florian Golemo and Felix Heide and Liam Paull and Christopher Pal},
+      booktitle={8th Annual Conference on Robot Learning},
+      year={2024},
+      url={https://openreview.net/forum?id=MfIUKzihC8}
     }
